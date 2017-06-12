@@ -43,6 +43,7 @@ namespace OMSIFYP.Controllers
                     else if (per.Role == "Instructor")
                     {
                         Instructor ins = (Instructor)per;
+                        ViewBag.Name = ins.FullName;
                         return RedirectToAction("Details_Ins", "Login", new { id = ins.ID });
                     }
                     else if (per.Role == "Admin")

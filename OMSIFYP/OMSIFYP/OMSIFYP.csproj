@@ -245,6 +245,7 @@
     <Compile Include="Controllers\AdminContactsController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
+    <Compile Include="Controllers\EnrollmentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -308,11 +309,16 @@
     <Compile Include="Migrations\201706112103434_initial6.Designer.cs">
       <DependentUpon>201706112103434_initial6.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706120848200_AttendanceAdded.cs" />
+    <Compile Include="Migrations\201706120848200_AttendanceAdded.Designer.cs">
+      <DependentUpon>201706120848200_AttendanceAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\AdminContact.cs" />
+    <Compile Include="Models\Attendance.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Enrollment.cs" />
@@ -1127,6 +1133,13 @@
     <Content Include="Views\Sections\Details.cshtml" />
     <Content Include="Views\Sections\Index.cshtml" />
     <Content Include="Views\Shared\_PartialUserInfo.cshtml" />
+    <Content Include="Views\Enrollments\Create.cshtml" />
+    <Content Include="Views\Enrollments\Delete.cshtml" />
+    <Content Include="Views\Enrollments\Details.cshtml" />
+    <Content Include="Views\Enrollments\Edit.cshtml" />
+    <Content Include="Views\Enrollments\Index.cshtml" />
+    <Content Include="Views\Enrollments\uploadMarks.cshtml" />
+    <Content Include="Views\Enrollments\updateMarks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1172,6 +1185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706112103434_initial6.resx">
       <DependentUpon>201706112103434_initial6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706120848200_AttendanceAdded.resx">
+      <DependentUpon>201706120848200_AttendanceAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

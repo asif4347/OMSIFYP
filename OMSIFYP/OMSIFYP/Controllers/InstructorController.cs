@@ -80,7 +80,7 @@ namespace ContosoUniversity.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "LastName,FirstMidName,HireDate,OfficeAssignment,CNIC,Address,imgUrl")]Instructor instructor, string[] selectedCourses)
+        public ActionResult Create(Instructor instructor, string[] selectedCourses)
         {
             if (selectedCourses != null)
             {
@@ -94,6 +94,8 @@ namespace ContosoUniversity.Controllers
             if (ModelState.IsValid)
             {
                 instructor.Role = "Instructor";
+                string imgName = instructor.imgUrl;
+                instructor.imgUrl = "/images/avatar/" + imgName;
                 db.Instructors.Add(instructor);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -165,9 +167,10 @@ namespace ContosoUniversity.Controllers
                     {
                         instructorToUpdate.OfficeAssignment = null;
                     }
-
+                    string imgName = instructorToUpdate.imgUrl;
+                    instructorToUpdate.imgUrl = "/images/avatar/" + imgName;
                     UpdateInstructorCourses(selectedCourses, instructorToUpdate);
-
+                   
                     db.SaveChanges();
 
                     return RedirectToAction("Index");

@@ -31,6 +31,8 @@ namespace OMSIFYP.Controllers
             if (ModelState.IsValid) {
                 ad.logCont = 0;
                 ad.Role = "Admin";
+                string img = ad.imgUrl;
+                ad.imgUrl = "/images/avatar/" + img;
                 db.Admin.Add(ad);
                 db.SaveChanges();
                 return RedirectToAction("Index");
