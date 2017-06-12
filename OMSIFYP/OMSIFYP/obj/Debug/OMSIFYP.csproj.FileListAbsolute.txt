@@ -406,3 +406,4 @@ C:\Users\Muhammad Asif\Documents\GitHub\OMSIFYP\OMSIFYP\OMSIFYP\obj\Debug\OMSIFY
 C:\Users\Muhammad Asif\Documents\GitHub\OMSIFYP\OMSIFYP\OMSIFYP\obj\Debug\OMSIFYP.csproj.GenerateResource.Cache
 C:\Users\Muhammad Asif\Documents\GitHub\OMSIFYP\OMSIFYP\OMSIFYP\obj\Debug\OMSIFYP.dll
 C:\Users\Muhammad Asif\Documents\GitHub\OMSIFYP\OMSIFYP\OMSIFYP\obj\Debug\OMSIFYP.pdb
+C:\Users\Muhammad Asif\Documents\GitHub\OMSIFYP\OMSIFYP\OMSIFYP\obj\Debug\OMSIFYP.Migrations.AttendanceAdded.resources

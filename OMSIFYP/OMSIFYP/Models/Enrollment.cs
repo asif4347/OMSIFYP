@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections;
+using System.ComponentModel.DataAnnotations;
 
 namespace OMSIFYP.Models
 {
@@ -19,6 +20,7 @@ namespace OMSIFYP.Models
         public int final { get; set; }
         public virtual Course Course { get; set; }
         public virtual Student Student { get; set; }
+        public virtual ICollection MyProperty { get; set; }
     }
 }
 

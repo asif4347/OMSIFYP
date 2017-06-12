@@ -18,6 +18,7 @@ namespace OMSIFYP.DAL
         public DbSet<SuperAdmin> SuperAdmin { get; set; }
         public DbSet<SuperAdminContact> superAdminContact { get; set; }
         public DbSet<PTMCalls> ptmCall { get; set; }
+        public DbSet<Attendance> Attendances { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
