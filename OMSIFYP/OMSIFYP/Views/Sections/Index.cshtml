@@ -1,0 +1,45 @@
+﻿@model IEnumerable<OMSIFYP.Models.Section>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.sec)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ins)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.sec)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cour)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ins)
+        </td>
+        <td>
+           
+           
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
